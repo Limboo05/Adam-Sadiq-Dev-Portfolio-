@@ -3,8 +3,8 @@ import styles from '@/styles/ContactCode.module.css';
 const contactItems = [
   {
     social: 'website',
-    link: 'megawiz.io',
-    href: 'https://megawiz.io',
+    link: 'limbo05',
+    href: 'https://github.com/Limboo05',
   },
   {
     social: 'email',
