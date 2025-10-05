@@ -3,38 +3,38 @@ import styles from '@/styles/ContactCode.module.css';
 const contactItems = [
   {
     social: 'website',
-    link: 'nitinranganath.com',
-    href: 'https://nitinranganath.com',
+    link: 'megawiz.io',
+    href: 'https://megawiz.io',
   },
   {
     social: 'email',
-    link: 'nitinranganath@gmail.com',
-    href: 'mailto:nitinranganath@gmail.com',
+    link: 'adamsadiq05@gmail.com',
+    href: 'mailto:adamsadiq05@gmail.com',
   },
   {
     social: 'github',
-    link: 'itsnitinr',
-    href: 'https://github.com/itsnitinr',
+    link: 'Limboo05',
+    href: 'https://github.com/Limboo05',
   },
   {
     social: 'linkedin',
-    link: 'nitinranganath',
-    href: 'https://www.linkedin.com/in/nitinranganath/',
+    link: 'Adam-Sadiq',
+    href: 'https://www.linkedin.com/in/Adam-Sadiq',
   },
   {
     social: 'twitter',
-    link: 'iamnitinr',
-    href: 'https://www.twitter.com/iamnitinr',
+    link: 'Khalifahsadiq',
+    href: 'https://twitter.com/Khalifahsadiq',
   },
   {
     social: 'telegram',
-    link: 'iamnitinr',
-    href: 'https://t.me/iamnitinr',
+    link: 'Limboooo05',
+    href: 'https://t.me/Limboooo05',
   },
   {
     social: 'peerlist',
-    link: 'nitinranganath',
-    href: 'https://peerlist.io/nitinranganath',
+    link: 'Adam Sadiq',
+    href: 'https://peerlist.io/Adam-Sadiq',
   },
 ];
 
@@ -47,7 +47,7 @@ const ContactCode = () => {
       {contactItems.map((item, index) => (
         <p className={styles.line} key={index}>
           &nbsp;&nbsp;&nbsp;{item.social}:{' '}
-          <a href={item.href} target="_blank" rel="noopener">
+          <a href={item.href} target="_blank" rel="noopener noreferrer">
             {item.link}
           </a>
           ;
