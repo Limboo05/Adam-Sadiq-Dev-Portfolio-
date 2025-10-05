@@ -91,14 +91,49 @@ export default function HomePage() {
 
         <div className={styles.infoSection}>
           <h1 className={styles.developerName}>
-            Nitin <span className={styles.accentText}> Adam Sadiq</span>
+            Adam <span className={styles.accentText}> Sadiq Ismail</span>
           </h1>
 
           <div className={styles.developerRole}>Full Stack Web Developer</div>
 
           <p className={styles.bio}>
-            I build elegant, responsive web applications with modern
-            technologies. Focused on clean code and intuitive user experiences.
+            I build and teach the creation of full-stack web applications using React, Node.js, Express, and MongoDB.
+            Passionate about empowering others through hands-on learning and real-world development projects.
+          </p>
+
+          <div className={styles.actionLinks}>
+            <Link href="/projects" className={styles.primaryLink}>
+              View Projects <VscArrowRight />
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.decorElements}>
+        <div className={styles.codeFlare}></div>
+        <div className={styles.gridLines}></div>
+        <div className={styles.codeBlock1}>{'{'}</div>
+        <div className={styles.codeBlock2}>{'}'}</div>
+        <div className={styles.codeBlock3}>{'<>'}</div>
+        <div className={styles.codeBlock4}>{'/>'}</div>
+        <div className={styles.orb1}></div>
+        <div className={styles.orb2}></div>
+        <div className={styles.orb3}></div>
+        <div className={styles.codeSymbol1}>{'()'}</div>
+        <div className={styles.codeSymbol2}>{'[]'}</div>
+        <div className={styles.codeSymbol3}>{'=>'}</div>
+        <div className={styles.dotPattern}></div>
+        <div className={styles.mobileAccent}></div>
+      </div>
+    </div>
+  );
+}
+
+export async function getStaticProps() {
+  return {
+    props: { title: 'Home' },
+  };
+}
           </p>
 
           <div className={styles.actionLinks}>
