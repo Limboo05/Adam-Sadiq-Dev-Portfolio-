@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { VscArrowRight } from 'react-icons/vsc';
-
 import styles from '@/styles/HomePage.module.css';
 
 export default function HomePage() {
@@ -9,10 +8,7 @@ export default function HomePage() {
 
   const codeLines = [
     { code: 'const HomePage = () => {', type: 'function' },
-    {
-      code: '  const [isLoaded, setIsLoaded] = useState(true);',
-      type: 'variable',
-    },
+    { code: '  const [isLoaded, setIsLoaded] = useState(true);', type: 'variable' },
     { code: '  const developerInfo = {', type: 'variable' },
     { code: "    name: 'Adam Sadiq Ismail',", type: 'array-item' },
     { code: "    role: 'Full Stack Developer',", type: 'array-item' },
@@ -20,10 +16,7 @@ export default function HomePage() {
     { code: '  };', type: 'array-end' },
     { code: '', type: 'blank' },
     { code: '  useEffect(() => {', type: 'nested-function' },
-    {
-      code: '    document.title = `${developerInfo.name} | Portfolio`;',
-      type: 'return',
-    },
+    { code: '    document.title = `${developerInfo.name} | Portfolio`;', type: 'return' },
     { code: '    setIsLoaded(true);', type: 'function-call' },
     { code: '  }, []);', type: 'close' },
     { code: '', type: 'blank' },
@@ -32,10 +25,7 @@ export default function HomePage() {
     { code: '      <h1>{developerInfo.name}</h1>', type: 'object-method' },
     { code: '      <p>{developerInfo.role}</p>', type: 'object-method' },
     { code: '      <div className="cta">', type: 'object-method' },
-    {
-      code: '        <Link href="/projects">View Projects</Link>',
-      type: 'object-method',
-    },
+    { code: '        <Link href="/projects">View Projects</Link>', type: 'object-method' },
     { code: '      </div>', type: 'object-method' },
     { code: '    </main>', type: 'object-method' },
     { code: '  );', type: 'close' },
@@ -48,13 +38,13 @@ export default function HomePage() {
     const interval = setInterval(() => {
       setActiveLineIndex((prev) => (prev + 1) % codeLines.length);
     }, 2000);
-
     return () => clearInterval(interval);
   }, [codeLines.length]);
 
   return (
     <div className={styles.heroLayout}>
       <div className={styles.container}>
+        {/* Code Animation Section */}
         <div className={styles.codeSection}>
           <div className={styles.codeContainer}>
             <div className={styles.editorContent}>
@@ -83,15 +73,15 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-
               <div className={styles.overlayGlow}></div>
             </div>
           </div>
         </div>
 
+        {/* Developer Info Section */}
         <div className={styles.infoSection}>
           <h1 className={styles.developerName}>
-            Adam <span className={styles.accentText}> Sadiq Ismail</span>
+            Adam <span className={styles.accentText}>Sadiq Ismail</span>
           </h1>
 
           <div className={styles.developerRole}>Full Stack Web Developer</div>
@@ -109,6 +99,7 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Decorative Elements */}
       <div className={styles.decorElements}>
         <div className={styles.codeFlare}></div>
         <div className={styles.gridLines}></div>
